@@ -39,7 +39,6 @@ gemini_client = genai.Client(api_key=os.getenv("GEMINI_API_KEY"))
 
 
 
-
 @app.get('/')
 def index():
     return {'status': 'everything is okay'}
@@ -76,12 +75,14 @@ def get_answer(question_request: QuestionRequest):
 
     for chunk in retrieved_chunks:
 
-        year = chunk.payload['year']
-        regulation_type = chunk.payload['regulation_type']
-        article = chunk.payload['article']
-        chapter = chunk.payload['chapter']
+        reference = {}
 
-        references.append(f"{year} {regulation_type.capitalize()} regulation, article {article}, chapter '{chapter}'")
+        reference['year'] = chunk.payload['year']
+        reference['regulation_type'] = chunk.payload['regulation_type']
+        reference['article'] = chunk.payload['article']
+        reference['chapter'] = chunk.payload['chapter']
+
+        references.append(reference)
 
 
     return {'answer': answer, 'references': references}
