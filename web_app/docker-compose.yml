@@ -1,5 +1,14 @@
 services:
 
+  frontend:
+    build: ./frontend
+    container_name: rag-f1-frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    restart: always
+
   backend:
     build: ./backend
     container_name: rag-f1-backend

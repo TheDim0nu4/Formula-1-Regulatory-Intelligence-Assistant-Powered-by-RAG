@@ -1,5 +1,6 @@
 fastapi==0.136.1
 uvicorn==0.47.0
+pydantic==2.13.4
 fastembed==0.8.0
 qdrant-client==1.18.0
 cohere==7.0.4

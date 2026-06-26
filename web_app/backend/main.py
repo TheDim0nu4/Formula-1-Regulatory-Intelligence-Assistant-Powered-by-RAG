@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
 from fastembed import SparseTextEmbedding, TextEmbedding
 from qdrant_client import QdrantClient
 import cohere
@@ -11,6 +12,12 @@ import time
 
 
 app = FastAPI()
+
+
+
+
+class QuestionRequest(BaseModel):
+    question: str
 
 
 
@@ -40,11 +47,13 @@ def index():
 
 
 
-@app.get('/get-answer')
-def get_answer(question: str):
+@app.post('/get-answer')
+def get_answer(question_request: QuestionRequest):
 
+    question = question_request.question
 
     MAX_RETRIES = 3
+    RETRY_DELAY = 5
 
     for attempt in range(1, MAX_RETRIES+1):
 
@@ -54,7 +63,7 @@ def get_answer(question: str):
         except Exception as e:
 
             if '503 UNAVAILABLE' in str(e) and attempt < MAX_RETRIES:
-                time.sleep(5)
+                time.sleep(RETRY_DELAY)
                 continue
 
             raise HTTPException(status_code=500, detail=str(e))
@@ -75,7 +84,7 @@ def get_answer(question: str):
         references.append(f"{year} {regulation_type.capitalize()} regulation, article {article}, chapter '{chapter}'")
 
 
-    return {'answer': answer, 'references': references, 'attempt': attempt}
+    return {'answer': answer, 'references': references}
 
 
 
