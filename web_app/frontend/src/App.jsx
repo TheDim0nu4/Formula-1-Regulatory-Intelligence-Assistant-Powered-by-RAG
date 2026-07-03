@@ -18,7 +18,8 @@ function App() {
         "How did the Safety Car regulations change between 2021 and 2022?",
         "How have the Sprint regulations evolved from 2021 to 2026?",
         "Which articles in the 2026 Sporting Regulations govern Safety Car procedures?",
-        "A driver exceeded the maximum speed limit in the pit lane during a race in 2022. According to the Sporting Regulations, should the driver receive a penalty?"
+        "A driver exceeded the maximum speed limit in the pit lane during a race in 2022. According to the Sporting Regulations, should the driver receive a penalty?",
+        "Is it true that the total race distance at Monaco is shorter than at all the other circuits?"
     ];
 
     const [question, setQuestion] = useState("");
