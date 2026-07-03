@@ -9,3 +9,59 @@ and a web application that provides an intuitive interface for interacting with 
 
 ## 📁 Project Structure 
 
+```
+Formula-1-Regulatory-Intelligence-Assistant-Powered-by-RAG/
+│
+├── data/
+│   ├── documents/
+│   └── qdrant_storage/
+│
+├── images/
+│
+├── notebooks/
+│   ├── data_indexing.ipynb
+│   └── rag_pipeline_test.ipynb
+│
+├── web_app/
+│   ├── backend/
+│   ├── frontend/
+│   └── docker-compose.yml
+│
+├── .env
+├── .gitignore
+├── README.md
+└── requirements.txt
+```
+
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
