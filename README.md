@@ -1,4 +1,4 @@
-# 🏁 Formula 1 Regulatory Intelligence Assistant Powered by RAG
+# 🏁 Formula 1 Regulatory Intelligence Assistant Powered by Retrieval-Augmented Generation (RAG)
 
 This project implements a Formula 1 Regulatory Intelligence Assistant powered by Retrieval-Augmented Generation (RAG). 
 The system allows users to ask natural language questions about FIA Formula 1 Sporting Regulations and returns accurate answers with references to the relevant regulation articles. 
