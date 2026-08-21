@@ -129,7 +129,7 @@ The web application lets users type a question, pick from a list of example ques
 
 ![image](images/web_app_2.png)
 
-
+![image](images/web_app_3.png)
 
 
 
