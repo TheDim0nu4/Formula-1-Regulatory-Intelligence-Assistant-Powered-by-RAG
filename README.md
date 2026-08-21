@@ -133,8 +133,44 @@ The web application lets users type a question, pick from a list of example ques
 
 
 
+## 🛠️ Tools Used
+
+For data indexing, retrieval, and pipeline testing:
+
+- Python (PyMuPDF, Qdrant Client, FastEmbed, Cohere, google-genai)
+- Jupyter Notebook
+- Qdrant
+
+For creating a web application:
+
+- FastAPI
+- React.js
+- Qdrant
+- Docker
 
 
+
+## ⚡ Installation
+
+1. Clone the repository: <br>
+
+   `git clone https://github.com/TheDim0nu4/Formula-1-Regulatory-Intelligence-Assistant-Powered-by-RAG.git` <br>
+   `cd Formula-1-Regulatory-Intelligence-Assistant-Powered-by-RAG` <br>
+   
+2. Create a .env file in the root of the project with the following variables: <br>
+   ```
+   GEMINI_API_KEY=your_gemini_api_key
+   COHERE_API_KEY=your_cohere_api_key
+   ```
+
+
+## 🧠 Running Jupyter Notebooks (Conda)
+
+
+
+## ✍️ Author
+
+The project was carried out by Dmytro Skrypchenko.
 
 
 
