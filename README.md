@@ -173,11 +173,11 @@ For creating a web application:
 
 2. Activate the environment: <br>
 
-  `conda activate f1_rag_env` <br>
+   `conda activate f1_rag_env` <br>
   
 3. Install project dependencies: <br>
 
-  `python -m pip install -r requirements.txt` <br>
+   `python -m pip install -r requirements.txt` <br>
 
 4. Select the environment kernel in Jupyter: <br>
 
@@ -192,17 +192,17 @@ Note: both notebooks start a local Qdrant Docker container to connect to (`docke
 
 1. Open the folder with the web application: <br>
 
-  `cd web_app` <br>
+   `cd web_app` <br>
   
 2. Build and run the application using Docker Compose: <br> 
 
-  `docker compose up --build` <br> 
+   `docker compose up --build` <br> 
   
   The application will be available at the URL: http://localhost:3000 <br>
   
 3. Stop the application: <br>
 
-  `docker compose down` <br>
+   `docker compose down` <br>
 
 
 
