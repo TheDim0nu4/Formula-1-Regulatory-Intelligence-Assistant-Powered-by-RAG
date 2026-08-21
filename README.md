@@ -164,7 +164,45 @@ For creating a web application:
    ```
 
 
+
 ## 🧠 Running Jupyter Notebooks (Conda)
+
+1. Create a Conda environment: <br>
+
+   `conda create -n f1_rag_env python=3.11` <br>
+
+2. Activate the environment: <br>
+
+  `conda activate f1_rag_env` <br>
+  
+3. Install project dependencies: <br>
+
+  `python -m pip install -r requirements.txt` <br>
+
+4. Select the environment kernel in Jupyter: <br>
+
+  - Open the notebooks and select the kernel corresponding to the created Conda environment (f1_rag_env).
+  - After selecting the kernel, you can run the notebook cells and start working with the project.
+
+Note: both notebooks start a local Qdrant Docker container to connect to (`docker run -d --name qdrant_f1 -p 6333:6333 -v "../data/qdrant_storage:/qdrant/storage" qdrant/qdrant:v1.18.0`), and stop it at the end. Since data/qdrant_storage already contains the indexed regulations, running data_indexing.ipynb again is only required if you want to rebuild the collection from scratch.
+
+
+
+## 🌐 Running the Web Application (Docker)
+
+1. Open the folder with the web application: <br>
+
+  `cd web_app` <br>
+  
+2. Build and run the application using Docker Compose: <br> 
+
+  `docker compose up --build` <br> 
+  
+  The application will be available at the URL: http://localhost:3000 <br>
+  
+3. Stop the application: <br>
+
+  `docker compose down` <br>
 
 
 
