@@ -33,8 +33,15 @@ Formula-1-Regulatory-Intelligence-Assistant-Powered-by-RAG/
 └── requirements.txt
 ```
 
-- 
--
+- data/documents/ folder with the source FIA Sporting Regulations PDFs (2018–2026) and their metadata.
+- data/qdrant_storage/ folder with the persisted Qdrant vector database created during indexing.
+- images/ folder with images used in the README.
+- notebooks/ folder with jupyter notebooks.
+- web_app/ folder with web application.
+- .env file with environment variables (API keys).
+- .gitignore file specifying files ignored by Git.
+- README.md provides project overview and instructions.
+- requirements.txt specifies Python dependencies for the notebooks.
 
 
 
